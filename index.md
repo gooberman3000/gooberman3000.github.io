@@ -1,6 +1,6 @@
 ---
 layout: default
-title: DREAM Project Site
+title: Final Quest report
 ---
 
 * TOC
@@ -8,15 +8,11 @@ title: DREAM Project Site
 
 ## About Me
 
-My info goes here.
-
-## About My Advisor
-
-Advisor info goes here.
+I like pancakes because they taste so good, and I want to eat yummy food
 
 ## About My Project
 
-Project description goes here.
+The project I will be doing is a slot machine on a GUI that allows you to not only run the slot machine but also bet and win or lose money.
 
 [My Final Report](files/finalreport.pdf)
 
