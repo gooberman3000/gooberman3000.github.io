@@ -8,11 +8,11 @@ title: Final Quest report
 
 ## About Me
 
-I like pancakes because they taste so good, and I want to eat yummy food
+I like to code especially games like Snake
 
 ## About My Project
 
-The project I will be doing is a slot machine on a GUI that allows you to not only run the slot machine but also bet and win or lose money.
+For my Final Quest, I would like to make a snake game from the Pygame module. The reason I chose this particular project was because I love developing games that not I can only play but also I can share and others can play as well. I also chose it for its simplicity as I feel like it's not too overly complicated but challenging enough for me to do. I believe some topics I will be implementing in my game are tuples to store the position of the snake, modules, a lot of if and else statements, and functions to take care of tasks like movement, spawning the food, and eating food. How I will implement this is by informing myself about the pygame module reading the different functionalities getting to know how to create a screen and getting that screen to display stuff. I believe that for at least the first day I will be doing this. Then for the second day, I would like to strategize and figure out how I might go about doing this project so no day is wasted and there is always a goal in mind for that day. From then onwards, I would like to start coding the different elements of the snake, like spawning the food in a random location after one is eaten, adding a square to the snake once the food is eaten, and ending the game if the head bumps into its own body or the edge of the screen, and the movement of the snake using arrow keys. By the end of the allotted time, I would like to have a fully functioning snake game that me and everyone can enjoy.
 
 [My Final Report](files/finalreport.pdf)
 
