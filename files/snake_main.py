@@ -3,6 +3,7 @@ import random
 
 pygame.init()
 
+#define constants
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
 UP = (0, -1)
@@ -11,6 +12,8 @@ LEFT = (-1, 0)
 RIGHT = (1, 0)
 
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+
+#this is kinda the fps clock
 clock = pygame.time.Clock()
 
 #4 line boundries
@@ -22,7 +25,9 @@ lines = [((0, 5), (SCREEN_WIDTH, 5)),
 #player attributes n stuff
 player_x = 300
 player_y = 250
+#I put player in a list to allow new segments to be appended and rendered in as 1 whole thing, called player.
 player = [pygame.Rect((player_x, player_y, 40, 40))]
+#I use random.choice which chooses a random element from a list and here it chooses a random direction
 player_direction = random.choice([UP, DOWN, LEFT, RIGHT])
 #number of pixels the player moves per frame
 player_speed = 5
@@ -32,6 +37,7 @@ obst_x = random.randint(35, int(SCREEN_WIDTH)-35)
 obst_y = random.randint(35, int(SCREEN_HEIGHT)-35)
 obst = pygame.Rect((obst_x, obst_y, 30, 30))
 
+#my font variable to define how the font will look like for when I render the score
 myfont = pygame.font.SysFont('monospace', 30, True)
 
 def move():
@@ -68,6 +74,7 @@ while run:
     
     # functional code for chekcing self-collision, except it checks if the head is in the same position as any segment
     if len(player) > 3:
+         #I do this because I want all the segments of the snake except for the head
         for segment in player[1:]:
             if (player[0].x, player[0].y) == (segment.x, segment.y):
                 score = 0
@@ -85,7 +92,7 @@ while run:
     #move function to allow player to move
     move()
 
-    #if the player collides with the food then randomize its position on the screen
+    #if the player collides with the food then randomize its position on the screen and add 1 to the score
     if player[0].colliderect(obst):
         score += 1
         obst_x = random.randint(35, int(SCREEN_WIDTH)-35)
@@ -104,10 +111,12 @@ while run:
 
     
     for event in pygame.event.get():
+         #exits out of game when you press the x on the window
         if event.type == pygame.QUIT:
             run = False
         
         elif event.type == pygame.KEYDOWN:
+         #I do the extra and statement to not allow the snake to reverse because I do not want the snake reversing into itself
             if event.key == pygame.K_UP and player_direction != DOWN:
                 player_direction = UP
             elif event.key == pygame.K_DOWN and player_direction != UP:
