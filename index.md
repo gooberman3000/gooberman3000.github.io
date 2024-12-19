@@ -8,7 +8,7 @@ title: Final Quest report
 
 ## About Me
 
-I like to code especially games like Snake
+I am Alberto Rojano. I am a Sophmore at Uni taking the course Programming fundamentals. I like to code especially games, I am taking this course to further my programming skill and ability and hope to further my interest through this course.
 
 ## About My Project
 
